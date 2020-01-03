@@ -1,0 +1,5 @@
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\bin\Debug\WK.Tea.DataModel.dll
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\bin\Debug\WK.Tea.DataModel.pdb
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\obj\Debug\WK.Tea.DataModel.dll
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\obj\Debug\WK.Tea.DataModel.pdb
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\obj\Debug\WK.Tea.DataModel.csprojAssemblyReference.cache

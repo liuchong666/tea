@@ -1,0 +1,61 @@
+﻿<title>倒茶</title>
+
+<div class="layui-fluid layui-bg">
+    <div class="layui-card home-search-pannel">
+        <div class="layui-card-body">
+            <div class="layui-form">
+                <div class="layui-form-item layui-item-separatorline" id="choiceStartTime">
+                    <label class="layui-form-label">预定时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" readonly="readonly" value="" />
+                    </div>
+                </div>
+                <div class="layui-form-item" id="choiceTimeLong">
+                    <label class="layui-form-label">预定时长</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" readonly="readonly" value="2小时" />
+                    </div>
+                </div>
+                <div class="layui-form-item text-center">
+                    <a class="layui-btn layui-btn-green" lay-href="/shop">开始搜索</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="~/assets/layer_mobile/layer.js"></script>
+<script>
+    layui.use(['admin', 'mtimer'], function () {
+        console.log($)
+        var $ = layui.jquery, mtimer = layui.mtimer;
+
+        var nowDate = new Date(),
+            nM = nowDate.getMonth() + 1,
+            nD = nowDate.getDate(),
+            nH = nowDate.getHours(),
+            nMin = nowDate.getMinutes();
+
+        if (nMin >= 30) {
+            nH++;
+            nMin = "00";
+        } else {
+            nMin = "30";
+        }
+        if (nH < 10) {
+            nH = "0" + nH;
+        }
+        $('#choiceStartTime  input[type=text]').val(nM + "月" + nD + "日 " + nH + ":" + nMin);
+
+
+
+        mtimer.render({
+            elem: '#choiceStartTime'
+        });
+
+        mtimer.render({
+            type: 2,
+            elem: '#choiceTimeLong'
+        });
+    });
+</script>

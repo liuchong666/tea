@@ -1,0 +1,10 @@
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.DataModel\bin\Release\WK.Tea.DataModel.dll
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.DataModel\bin\Release\WK.Tea.DataModel.pdb
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.DataModel\obj\Release\WK.Tea.DataModel.csprojResolveAssemblyReference.cache
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.DataModel\obj\Release\WK.Tea.DataModel.dll
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.DataModel\obj\Release\WK.Tea.DataModel.pdb
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\bin\Release\WK.Tea.DataModel.dll
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\bin\Release\WK.Tea.DataModel.pdb
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\obj\Release\WK.Tea.DataModel.csprojAssemblyReference.cache
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\obj\Release\WK.Tea.DataModel.dll
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.DataModel\obj\Release\WK.Tea.DataModel.pdb

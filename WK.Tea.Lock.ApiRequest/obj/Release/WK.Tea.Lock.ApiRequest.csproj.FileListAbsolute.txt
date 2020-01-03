@@ -1,0 +1,15 @@
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.Lock.ApiRequest\bin\Release\WK.Tea.Lock.ApiRequest.dll
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.Lock.ApiRequest\bin\Release\WK.Tea.Lock.ApiRequest.pdb
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.Lock.ApiRequest\bin\Release\Newtonsoft.Json.dll
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.Lock.ApiRequest\obj\Release\WK.Tea.Lock.ApiRequest.csprojResolveAssemblyReference.cache
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.Lock.ApiRequest\obj\Release\WK.Tea.Lock.ApiRequest.dll
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.Lock.ApiRequest\obj\Release\WK.Tea.Lock.ApiRequest.pdb
+E:\工作\倒茶\WK.Tea.Project\WK.Tea.Lock.ApiRequest\bin\Release\Newtonsoft.Json.xml
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.Lock.ApiRequest\bin\Release\WK.Tea.Lock.ApiRequest.dll
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.Lock.ApiRequest\bin\Release\WK.Tea.Lock.ApiRequest.pdb
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.Lock.ApiRequest\bin\Release\Newtonsoft.Json.dll
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.Lock.ApiRequest\bin\Release\Newtonsoft.Json.xml
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.Lock.ApiRequest\obj\Release\WK.Tea.Lock.ApiRequest.csprojAssemblyReference.cache
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.Lock.ApiRequest\obj\Release\WK.Tea.Lock.ApiRequest.csproj.CopyComplete
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.Lock.ApiRequest\obj\Release\WK.Tea.Lock.ApiRequest.dll
+Z:\xiaofeng\Desktop\tea\tea\WK.Tea.Project\WK.Tea.Lock.ApiRequest\obj\Release\WK.Tea.Lock.ApiRequest.pdb

@@ -1,0 +1,400 @@
+2019-11-23 14:47:17,937 WARN  : app started.
+2019-11-23 14:50:45,367 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/shop/pagelist?page=1&limit=30
+	错误信息：未找到路径“/api/shop/pagelist”的控制器或该控制器未实现 IController。
+	错误源：System.Web.Mvc
+	异常方法：System.Web.Mvc.IController GetControllerInstance(System.Web.Routing.RequestContext, System.Type)
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   在 System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 14:50:51,414 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/shop/pagelist?page=1&limit=30
+	错误信息：未找到路径“/api/shop/pagelist”的控制器或该控制器未实现 IController。
+	错误源：System.Web.Mvc
+	异常方法：System.Web.Mvc.IController GetControllerInstance(System.Web.Routing.RequestContext, System.Type)
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   在 System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 14:53:44,164 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/shop/list?access_token=
+	错误信息：未找到路径“/api/shop/list”的控制器或该控制器未实现 IController。
+	错误源：System.Web.Mvc
+	异常方法：System.Web.Mvc.IController GetControllerInstance(System.Web.Routing.RequestContext, System.Type)
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   在 System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 14:53:44,240 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/order/pagelist?page=1&limit=30
+	错误信息：未找到路径“/api/order/pagelist”的控制器或该控制器未实现 IController。
+	错误源：System.Web.Mvc
+	异常方法：System.Web.Mvc.IController GetControllerInstance(System.Web.Routing.RequestContext, System.Type)
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   在 System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:06:12,882 WARN  : app stopped.
+2019-11-23 15:11:11,850 WARN  : app started.
+2019-11-23 15:11:17,406 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/shop/list?access_token=
+	错误信息：找到多个与名为“shop”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“shop”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.ShopController
+WK.Tea.Web.Areas.Admin.Controllers.ShopController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:11:17,410 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/order/pagelist?page=1&limit=30
+	错误信息：找到多个与名为“order”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“order”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.OrderController
+WK.Tea.Web.Areas.Admin.Controllers.OrderController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:14:12,295 WARN  : app stopped.
+2019-11-23 15:14:35,276 WARN  : app started.
+2019-11-23 15:14:39,668 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/shop/list?access_token=
+	错误信息：找到多个与名为“shop”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“shop”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.ShopController
+WK.Tea.Web.Areas.Admin.Controllers.ShopController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:14:39,691 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/order/pagelist?page=1&limit=30
+	错误信息：找到多个与名为“order”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“order”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.OrderController
+WK.Tea.Web.Areas.Admin.Controllers.OrderController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:15:47,362 WARN  : app stopped.
+2019-11-23 15:16:17,534 WARN  : app started.
+2019-11-23 15:16:21,271 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/shop/list?access_token=
+	错误信息：找到多个与名为“shop”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“shop”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.ShopController
+WK.Tea.Web.Areas.Admin.Controllers.ShopController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:16:21,289 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/order/pagelist?page=1&limit=30
+	错误信息：找到多个与名为“order”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“order”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.OrderController
+WK.Tea.Web.Areas.Admin.Controllers.OrderController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:19:21,752 WARN  : app stopped.
+2019-11-23 15:20:06,374 WARN  : app started.
+2019-11-23 15:20:10,318 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/shop/list?access_token=
+	错误信息：找到多个与名为“shop”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“shop”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.ShopController
+WK.Tea.Web.Areas.Admin.Controllers.ShopController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:20:10,343 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/order/pagelist?page=1&limit=30
+	错误信息：找到多个与名为“order”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“order”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.OrderController
+WK.Tea.Web.Areas.Admin.Controllers.OrderController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:20:13,719 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/shop/pagelist?page=1&limit=30
+	错误信息：找到多个与名为“shop”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“shop”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.ShopController
+WK.Tea.Web.Areas.Admin.Controllers.ShopController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:20:15,947 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/shop/list?access_token=
+	错误信息：找到多个与名为“shop”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“shop”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.ShopController
+WK.Tea.Web.Areas.Admin.Controllers.ShopController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:20:15,981 ERROR : 
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:70
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:13066/api/order/pagelist?page=1&limit=30
+	错误信息：找到多个与名为“order”的控制器匹配的类型。如果为此请求(“api/{controller}/{id}”)提供服务的路由没有指定命名空间以搜索与此请求相匹配的控制器，则会发生这种情况。如果是这样，请通过调用带有 'namespaces' 参数的 "MapRoute" 方法的重载来注册此路由。
+
+“order”请求找到下列匹配的控制器:
+WK.Tea.Web.Controllers.OrderController
+WK.Tea.Web.Areas.Admin.Controllers.OrderController
+	错误源：System.Web.Mvc
+	异常方法：System.Type GetControllerTypeWithinNamespaces(System.Web.Routing.RouteBase, System.String, System.Collections.Generic.HashSet`1[System.String])
+	堆栈信息：   在 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   在 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   在 System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2019-11-23 15:39:36,194 WARN  : app stopped.
+2019-11-23 15:41:26,781 WARN  : app started.
+2019-11-23 15:46:03,545 WARN  : app stopped.
+2019-11-23 16:12:23,292 WARN  : app started.
+2019-11-23 16:13:19,761 WARN  : app stopped.
+2019-11-23 16:14:34,036 WARN  : app started.
+2019-11-23 17:30:54,808 WARN  : app stopped.
+2019-11-23 17:31:31,036 WARN  : app started.
+2019-11-23 17:38:17,526 WARN  : app stopped.
+2019-11-23 17:46:07,913 WARN  : app started.

@@ -1,0 +1,73 @@
+﻿<div class="layui-fluid">
+    <div class="shop-list">
+    </div>
+</div>
+
+<script>
+    layui.use(['admin'], function () {
+        
+        var $ = layui.jquery
+        , admin = layui.admin;
+
+        admin.req({
+            url: '/api/shop/pagelist'
+            , type: 'get'
+            , data: {
+                limit: 10,
+                page: 1
+            }
+            //, contentType: "application/json"
+            , done: function (res) { //这里要说明一下：done 是只有 response 的 code 正常才会执行。而 succese 则是只要 http 为 200 就会执行
+                layui.each(res.data, function (index, item) {
+                    var shopItem = $([
+                        function () {
+                            if (item.Flag == 2) {
+                                return '<div class="layui-card shop-card-item">';
+                            } else {
+                                return '<div class="layui-card shop-card-item" lay-href="/shop/detail?id=' + item.ID + '">';
+                            }
+                        }()
+                        , function () {
+                            if (item.Flag == 2) {
+                                return '<img style="width:100%; height:100%" src="/assets/images/BJ0000.jpg" />';
+                            } else {
+                                return '<img style="width:100%; height:100%" src="/assets/images/shop/' + item.ID + '/1.jpg" />';
+                            }
+                        }()
+                        , '<div class="mask">'
+                        , '<div>'
+                        , function () {
+                            if (item.Flag == 2) {
+                                return '正在建设中';
+                            } else if (item.Flag == 1) {
+                                return item.ShopAddress + ' - 已停业';
+                            } else {
+                                return item.ShopAddress;
+                            }
+                        }()
+                        , '</div>'
+                        , '<div class="info">'
+                        , '<div>营业时间：00:00-24:00</div>'
+                        , '<div>' + item.ShopName + '</div>'
+                        , '</div>'
+                        , '</div>'
+                        , '</div>'
+                    ].join(''));
+
+                    $('.shop-list').append(shopItem);
+
+                    if (item.Flag != 2) {
+                        shopItem.click(function () {
+
+                        });
+                    }
+                })
+
+            }, success: function (res) {
+            }, complete: function () {
+
+            }
+        });
+
+    });
+</script>
