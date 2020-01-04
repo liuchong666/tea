@@ -147,7 +147,7 @@ namespace WK.Tea.Web.Common
 
             var sendResult = TemplateMessageAPI.SendTemplateMessage(WeixinConfig.AccessToken, jsonString.ToString());
 
-            LogWriter.Default.WriteError("Send Message, Content:" + jsonString.ToString() + ", Result: " + DynamicJson.Serialize(sendResult));
+            LogWriter.Default.WriteError("Send Message, Content:" + jsonString.ToString() + ", Result: " + DynamicJson.Serialize(sendResult) + "|" + sendResult.errmsg);
         }
     }
 }
