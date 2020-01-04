@@ -30,10 +30,10 @@ namespace WK.Tea.Web.Areas.Admin.Controllers
                 }
                 if (shop != null)
                     WeixinTempMsg.SendCleanMsg(shop.ShopAddress, order.OrderNo, order.BTime, order.ETime);
-                return Json("");
+                return Json("发送成功", JsonRequestBehavior.AllowGet);
             }
 
-            return Json("");
+            return Json("发送失败",JsonRequestBehavior.AllowGet);
         }
     }
 }

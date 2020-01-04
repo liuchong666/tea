@@ -47,6 +47,7 @@ namespace WK.Tea.Web
         {
             get
             {
+                //return "29_nW9PQfzOjv-iboRlmlOpAyW4yMua8omqsKfRSyO3q9evJwZivP--lsbdLEgRjQ2voR7IOPNg2cSUtoP0Z8qLz1iMVDFT6mqlNZiqQ_MWoVURpW54Shdk6PugNsLqBSFDdO0vTHmyGQPvkGqdCYJgABAXTE";
                 if (cache.Get(AppID) == null)
                 {
                     ReqWeixinToken();
