@@ -385,6 +385,7 @@
     <Content Include="Views\Order\Settlement.cshtml" />
     <Content Include="Views\WxPay\Success.cshtml" />
     <Content Include="Views\WxPay\Failed.cshtml" />
+    <Content Include="Views\Order\XuDing.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -19,5 +19,11 @@ namespace WK.Tea.Web.Controllers
                 return View(model);
             }
         }
+
+        public ActionResult XuDing()
+        {
+            return View();
+
+        }
     }
 }

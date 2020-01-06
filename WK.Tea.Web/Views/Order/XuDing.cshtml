@@ -1,0 +1,176 @@
+﻿
+
+<div class="layui-row">
+    <div class="layui-col-xs1 layui-col-sm1">
+
+    </div>
+
+    <div class="layui-col-xs10 layui-col-sm10">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">预定手机号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="预定手机号" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">检索订单</button>
+                </div>
+            </div>
+            <div class="layui-form-item layui-item-separatorline" id="choiceTimeLong">
+                <label class="layui-form-label">预定时长</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" readonly="readonly" value="2小时" />
+                    <input type="hidden" name="Duration" value="120" />
+                    <input type="hidden" name="FeeCode" value="288" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="layui-col-xs1 layui-col-sm1">
+
+    </div>
+</div>
+<script type="text/javascript" src="~/assets/layer_mobile/layer.js"></script>
+<script type="text/javascript">
+    layui.use(['admin', 'mtimer', 'form', 'carousel'], function () {
+        var carousel = layui.carousel
+            , $ = layui.jquery
+        , form = layui.form
+        , mtimer = layui.mtimer
+        , admin = layui.admin
+        , router = layui.router()
+        , orderTime = {};
+
+        var nowDate = new Date(),
+            nY = nowDate.getFullYear(),
+            nM = nowDate.getMonth(),
+            nD = nowDate.getDate(),
+            nH = nowDate.getHours(),
+            nMin = nowDate.getMinutes();
+
+        for (var i = 0; i < 10; i++) {
+            var nextDate = new Date(nY, nM, nD + i),
+                y = nextDate.getFullYear(),
+                m = nextDate.getMonth() + 1,
+                d = nextDate.getDate();
+
+            getOrderTime(y + "/" + m + "/" + d);
+        }
+
+        function getOrderTime(date){
+            admin.req({
+                url: '/api/order/used/times'
+                , type: 'get'
+                , data: {
+                    shopId: 1,
+                    dateTime: date
+                }
+                , done: function (res) { //这里要说明一下：done 是只有 response 的 code 正常才会执行。而 succese 则是只要 http 为 200 就会执行
+                    orderTime[date] = res.data;
+                }, error: function (res) {
+                }, complete: function () {
+                }
+            });
+        }
+
+        if (nMin >= 30) {
+            nH++;
+            nMin = "00";
+        } else {
+            nMin = "30";
+        }
+        if (nH < 10) {
+            nH = "0" + nH;
+        }
+
+        $('#choiceStartTime input[type=text]').val((nM + 1) + "月" + nD + "日 " + nH + ":" + nMin);
+        $('input[name="BTime"]').val(nowDate.getFullYear() + "/" + (nM + 1) + "/" + nD + " " + nH + ":" + nMin);
+
+
+        mtimer.render({
+            elem: '#choiceStartTime',
+            click: function (value) {
+                $('input[name="BTime"]').val(value);
+            },
+            dateClick: function(value){
+                return orderTime;
+            }
+        });
+
+        mtimer.render({
+            type: 2,
+            elem: '#choiceTimeLong',
+            initData: function(){
+                var choiceStartTime = new Date($('input[name="BTime"]').val()),
+                    data = [],
+                    timeLong = 120,
+                    totalTime = choiceStartTime.getTime();
+
+                for (var j = 0; j < 18; j++) {
+                    nextTotalTime = totalTime + timeLong * 60 * 1000;
+                    nextTime = new Date(nextTotalTime);
+
+                    var nextExcludeTimes = orderTime[nextTime.getFullYear() + "/" + (nextTime.getMonth() + 1) + "/" + nextTime.getDate()];
+                    isOrdered = nextExcludeTimes && nextExcludeTimes.indexOf(nextTime.format("yyyy-MM-dd hh:mm:ss")) > -1;
+
+                    if (!isOrdered) {
+                        data.push(timeLong);
+                    }else{
+                        break;
+                    }
+                    timeLong += 30;
+                }
+                return data;
+            },
+            click: function (value) {
+                $('input[name="Duration"]').val(value);
+                var price = 288;
+                var t = value - 120;
+                price += t / 30 * 50;
+
+                var timelong = parseFloat(value) / 60;
+                $(".price").text(price);
+                $(".timelong").text(timelong);
+            }
+        });
+
+        $('.settlement .right').click(function () {
+            $('[lay-filter="saveOrder"]').trigger("click");
+        });
+
+        form.on('submit(saveOrder)', function (data) {
+            var loadIndex = layer.open({
+                type: 2
+                , content: '正在提交订单'
+            })
+            admin.req({
+                url: '/api/order/wx/add'
+                , type: 'post'
+                , data: JSON.stringify(data.field)
+                , contentType: "application/json"
+                , done: function (res) { //这里要说明一下：done 是只有 response 的 code 正常才会执行。而 succese 则是只要 http 为 200 就会执行
+
+                    window.location.hash = "/order/settlement?id=" + res.data.ID;
+                }, error: function(res){
+                    layer.open({
+                        content: res.msg ? res.msg : res
+                        , btn: '我知道了'
+                    });
+                }, complete: function () {
+                    layer.close(loadIndex);
+                }
+            });
+            return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+        });
+
+        //图片轮播
+        var ins = carousel.render({
+            elem: '#test1'
+          , width: '100%'
+          , height: '230px'
+          , interval: 5000
+        });
+
+
+    });
+</script>
