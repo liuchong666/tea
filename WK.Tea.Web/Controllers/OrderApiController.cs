@@ -177,6 +177,30 @@ namespace WK.Tea.Web.Controllers
             }
             return resultMsg.toJson();
         }
+
+        [Route("wx/search")]
+        public HttpResponseMessage SearchOrderWX([FromBody] T_Order order)
+        {
+            ResultMsg resultMsg = new ResultMsg();
+            T_Order orderResult = null;
+            using (IT_Order repository = new T_OrderRepository())
+            {
+                orderResult=repository.FindAll(c => c.Mobile == order.Mobile).OrderByDescending(c=>c.ID).FirstOrDefault();
+            }
+
+            if (orderResult == null)
+            {
+                resultMsg.code = 500;
+                resultMsg.msg = "暂无订单信息";
+
+                return resultMsg.toJson();
+            }
+
+            resultMsg.code = 200;
+            resultMsg.data = orderResult;
+
+            return resultMsg.toJson();
+        }
         
         [Route("admin/renew")]
         public HttpResponseMessage RenewOrderAdmin([FromBody] T_Order order)

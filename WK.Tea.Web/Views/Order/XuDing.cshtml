@@ -6,21 +6,21 @@
     </div>
 
     <div class="layui-col-xs10 layui-col-sm10">
-        <form class="layui-form" action="">
+        <form class="layui-form" action="" method="POST">
             <div class="layui-form-item">
                 <label class="layui-form-label">预定手机号</label>
                 <div class="layui-input-inline">
                     <input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="预定手机号" class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">
-                    <button type="submit" class="layui-btn layui-btn-primary layui-btn-sm">检索订单</button>
+                    <button type="submit" class="layui-btn layui-btn-primary layui-btn-sm" lay-filter="search" lay-submit>检索订单</button>
                 </div>
             </div>
-            <div style="display: none;">
+            <div style="display: none;" id="content">
                 <div class="layui-form-item" id="beginTime">
                     <label class="layui-form-label">开始时间</label>
                     <div class="layui-input-block">
-                        <input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="开始时间" class="layui-input" disabled>
+                        <input type="text" name="beginTime" lay-verify="beginTime" autocomplete="off" placeholder="开始时间" class="layui-input" disabled>
                     </div>
                 </div>
                 <div class="layui-form-item layui-item-separatorline" id="choiceTimeLong">
@@ -31,11 +31,10 @@
                         <input type="hidden" name="FeeCode" value="288" />
                     </div>
                 </div>
-                <div class="layui-form-item" id="beginTime">
+                <div class="layui-form-item">
                     <label class="layui-form-label">消费金额</label>
                     <div class="layui-input-block">
                         <span class="layui-badge layui-bg-orange"><span id="price">288</span>元</span>
-                        @*<input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="消费金额" class="layui-input" readonly="readonly"  value="288">*@
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -154,32 +153,77 @@
             }
         });
 
-        $('.settlement .right').click(function () {
-            $('[lay-filter="saveOrder"]').trigger("click");
-        });
+        //$('.settlement .right').click(function () {
+        //    $('[lay-filter="saveOrder"]').trigger("click");
+        //});
 
-        form.on('submit(saveOrder)', function (data) {
+        form.on('submit(search)', function (data) {
+            console.log(data.field);
             var loadIndex = layer.open({
-                type: 2
-                , content: '正在提交订单'
-            })
-            admin.req({
-                url: '/api/order/wx/add'
-                , type: 'post'
-                , data: JSON.stringify(data.field)
-                , contentType: "application/json"
-                , done: function (res) { //这里要说明一下：done 是只有 response 的 code 正常才会执行。而 succese 则是只要 http 为 200 就会执行
+                type: 2,
+                content: '正在检索订单'
+            });
 
-                    window.location.hash = "/order/settlement?id=" + res.data.ID;
-                }, error: function (res) {
+            $.ajax({
+                type: "POST",
+                url: '/api/order/wx/search',
+                data: data.field,
+                //请求成功
+                success: function(res) {
+                    if (res.code === 200) {
+                        $("#content").show();
+                        $('input[name="beginTime"]').val(res.data.ETime);
+                    } else {
+                        $("#content").hide();
+                        layer.open({
+                            content: res.msg ? res.msg : res
+                            , btn: '我知道了'
+                        });
+                    }
+                },
+                //请求失败，包含具体的错误信息
+                error: function(e) {
+                    $("#content").hide();
                     layer.open({
                         content: res.msg ? res.msg : res
                         , btn: '我知道了'
                     });
-                }, complete: function () {
-                    layer.close(loadIndex);
-                }
+                },complete: function () {
+                            layer.close(loadIndex);
+                        }
             });
+
+            //admin.req({
+            //    url: '/api/order/wx/search'
+            //    , type: 'post'
+            //    , data: JSON.stringify(data.field)
+            //    , contentType: "application/json"
+            //    , done: function (res) { //这里要说明一下：done 是只有 response 的 code 正常才会执行。而 succese 则是只要 http 为 200 就会执行
+            //        alert(res.code);
+            //        if (res.code === 200) {
+            //            alert(2);
+            //            $("#content").show();
+            //            $('input[name="beginTime"]').val(res.data.ETime);
+            //        } else {
+            //            alert(1);
+            //            $("#content").hide();
+            //            layer.open({
+            //                content: res.msg ? res.msg : res
+            //                , btn: '我知道了'
+            //            });
+            //        }
+                    
+
+            //    }, error: function (res) {
+            //        alert(3);
+            //        layer.open({
+            //            content: res.msg ? res.msg : res
+            //            , btn: '我知道了'
+            //        });
+            //    }, complete: function () {
+            //        layer.close(loadIndex);
+            //    }
+            //});
             return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
         });
 
