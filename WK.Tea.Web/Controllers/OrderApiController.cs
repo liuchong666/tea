@@ -627,5 +627,120 @@ namespace WK.Tea.Web.Controllers
             }
             return resultMsg.toJson();
         }
+
+        [Route("wx/xuding")]
+        public HttpResponseMessage XuDingOrderWX([FromBody] T_Order order)
+        {
+            ResultMsg resultMsg = new ResultMsg();
+            try
+            {
+                order.ETime = order.BTime.AddMinutes(order.Duration);
+                if (order.ETime < DateTime.Now)
+                {
+                    resultMsg.code = 1;
+                    resultMsg.msg = "预定结束时间必须大于当前时间！";
+                }
+                else if (order.BTime.Minute != 0 && order.BTime.Minute != 30)
+                {
+                    resultMsg.code = 1;
+                    resultMsg.msg = "预定开始时间必须以半小时为间隔，如：12:00，12:30！";
+                }
+                else if (order.ETime.Minute != 0 && order.ETime.Minute != 30)
+                {
+                    resultMsg.code = 1;
+                    resultMsg.msg = "预定结束时间必须以半小时为间隔，如：14:00，14:30！";
+                }
+                else if (order.Duration < 30 || order.Duration % 30 != 0)
+                {
+                    resultMsg.code = 1;
+                    resultMsg.msg = "预定时长至少半小时，时长必须半小时为整";
+                }
+                else
+                {
+                    bool checkOrderTime = false;
+                    using (IT_Order repository = new T_OrderRepository())
+                    {
+                        checkOrderTime = repository.CheckOrderTime(order);
+                    }
+                    if (checkOrderTime)
+                    {
+                        resultMsg.code = 1;
+                        resultMsg.msg = "预定时间段被占用，请重新选择预定时间";
+                    }
+                    else
+                    {
+                        T_Order porder = null;
+                        using (IT_Order repository = new T_OrderRepository())
+                        {
+                            porder = repository.FindFirstOrDefault(o => o.OrderNo == order.ParentNo&&o.PayStatus==1);
+
+                        }
+                        if (porder != null)
+                        {
+                            order.ShopID = porder.ShopID;
+                            order.Mobile = porder.Mobile;
+                            order.ReMarks = 0;
+                            order.Flag = 1;
+
+                            T_Shop shop = null;
+                            using (IT_Shop repository = new T_ShopRepository())
+                            {
+                                shop = repository.FindFirstOrDefault(o => o.ID == order.ShopID);
+                            }
+                            if (shop != null)
+                            {
+                                WK.Tea.Lock.ApiRequest.CreateCardRequest postEntity = new WK.Tea.Lock.ApiRequest.CreateCardRequest
+                                {
+                                    communityNo = "1316882760",
+                                    roomNo = shop.RoomNo,
+                                    floorNo = shop.FloorNo,
+                                    buildNo = shop.BuildNo,
+                                    startTime = order.BTime.AddMinutes(-15).ToString("yyMMddHHmm"),
+                                    endTime = order.ETime.AddMinutes(10).ToString("yyMMddHHmm"),
+                                    mobile = string.IsNullOrWhiteSpace(order.Mobile) ? WK.Tea.Lock.ApiRequest.LockApiHelper.Mobile : order.Mobile
+                                };
+                                WK.Tea.Lock.ApiRequest.CreateCardResponse result =
+                                    WK.Tea.Lock.ApiRequest.LockApiHelper.WebApi.Post<WK.Tea.Lock.ApiRequest.CreateCardRequest, WK.Tea.Lock.ApiRequest.CreateCardResponse>("https://api.uclbrt.com/?c=Qrcode&a=getLink", postEntity);
+                                using (IT_Order repository = new T_OrderRepository())
+                                {
+                                    TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+                                    order.OrderNo = "XDWX" + Convert.ToInt64(ts.TotalMilliseconds).ToString();
+                                    order.CardNo = result.cardNo;
+                                    order.ReMarks = 1;
+                                    order.PayStatus = 0;
+                                    order.Flag = 0;
+                                    order.FeeCode = 288;
+                                    var t = order.Duration - 120;
+                                    if (t > 0)
+                                    {
+                                        order.FeeCode += t / 30 * 50;
+                                    }
+                                    order.OpenID = User.Identity.Name;
+                                    order.CTime = DateTime.Now;
+                                    order = repository.Insert(order);
+                                    resultMsg.data = order;
+                                }
+                            }
+                            else
+                            {
+                                resultMsg.code = 1;
+                                resultMsg.msg = "门店不存在";
+                            }
+                        }
+                        else
+                        {
+                            resultMsg.code = 1;
+                            resultMsg.msg = "主订单不存在";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMsg.code = (int)StatusCodeEnum.Error;
+                resultMsg.msg = ex.Message;
+            }
+            return resultMsg.toJson();
+        }
     }
 }
