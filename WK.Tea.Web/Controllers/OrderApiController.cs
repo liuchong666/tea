@@ -185,7 +185,7 @@ namespace WK.Tea.Web.Controllers
             T_Order orderResult = null;
             using (IT_Order repository = new T_OrderRepository())
             {
-                orderResult=repository.FindAll(c => c.Mobile == order.Mobile&&c.PayStatus==1).OrderByDescending(c=>c.ID).FirstOrDefault();
+                orderResult=repository.FindAll(c => c.Mobile == order.Mobile && c.PayStatus == 1).OrderByDescending(c=>c.ID).FirstOrDefault();
             }
 
             if (orderResult == null)
@@ -672,7 +672,7 @@ namespace WK.Tea.Web.Controllers
                         T_Order porder = null;
                         using (IT_Order repository = new T_OrderRepository())
                         {
-                            porder = repository.FindFirstOrDefault(o => o.OrderNo == order.ParentNo&&o.PayStatus==1);
+                            porder = repository.FindFirstOrDefault(o => o.OrderNo == order.ParentNo && o.PayStatus == 1);
 
                         }
                         if (porder != null)
@@ -718,6 +718,8 @@ namespace WK.Tea.Web.Controllers
                                     order.OpenID = User.Identity.Name;
                                     order.CTime = DateTime.Now;
                                     order = repository.Insert(order);
+
+                                    resultMsg.code = 200;
                                     resultMsg.data = order;
                                 }
                             }
