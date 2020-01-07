@@ -13,33 +13,35 @@
                     <input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="预定手机号" class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">
-                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">检索订单</button>
+                    <button type="submit" class="layui-btn layui-btn-primary layui-btn-sm">检索订单</button>
                 </div>
             </div>
-            <div class="layui-form-item" id="beginTime">
-                <label class="layui-form-label">开始时间</label>
-                <div class="layui-input-block">
-                    <input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="开始时间" class="layui-input" disabled>
+            <div style="display: none;">
+                <div class="layui-form-item" id="beginTime">
+                    <label class="layui-form-label">开始时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="开始时间" class="layui-input" disabled>
+                    </div>
                 </div>
-            </div>
-            <div class="layui-form-item layui-item-separatorline" id="choiceTimeLong">
-                <label class="layui-form-label">预定时长</label>
-                <div class="layui-input-block">
-                    <input type="text" class="layui-input" readonly="readonly" value="2小时" />
-                    <input type="hidden" name="Duration" value="120" />
-                    <input type="hidden" name="FeeCode" value="288" />
+                <div class="layui-form-item layui-item-separatorline" id="choiceTimeLong">
+                    <label class="layui-form-label">预定时长</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" readonly="readonly" value="2小时" />
+                        <input type="hidden" name="Duration" value="120" />
+                        <input type="hidden" name="FeeCode" value="288" />
+                    </div>
                 </div>
-            </div>
-            <div class="layui-form-item" id="beginTime">
-                <label class="layui-form-label">消费金额</label>
-                <div class="layui-input-block">
-                    <span class="layui-badge layui-bg-orange">288元</span>
-                    @*<input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="消费金额" class="layui-input" readonly="readonly"  value="288">*@
+                <div class="layui-form-item" id="beginTime">
+                    <label class="layui-form-label">消费金额</label>
+                    <div class="layui-input-block">
+                        <span class="layui-badge layui-bg-orange"><span id="price">288</span>元</span>
+                        @*<input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="消费金额" class="layui-input" readonly="readonly"  value="288">*@
+                    </div>
                 </div>
-            </div>
-            <div class="layui-form-item">
-                <div class="layui-input-block">
-                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">去支付</button>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">去支付</button>
+                    </div>
                 </div>
             </div>
         </form>
@@ -147,8 +149,8 @@
                 price += t / 30 * 50;
 
                 var timelong = parseFloat(value) / 60;
-                $(".price").text(price);
-                $(".timelong").text(timelong);
+                $("#price").text(price);
+                //$(".timelong").text(timelong);
             }
         });
 
