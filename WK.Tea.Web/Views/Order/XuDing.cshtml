@@ -15,7 +15,7 @@
                 <div class="layui-input-inline">
                     <input type="text" name="mobile" lay-verify="mobile" autocomplete="off" placeholder="预定手机号" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">
+                <div class="layui-form-mid layui-word-aux" id="search">
                     <button type="submit" class="layui-btn layui-btn-primary layui-btn-sm" lay-filter="search" lay-submit>检索订单</button>
                 </div>
             </div>
@@ -176,10 +176,12 @@
                 success: function(res) {
                     if (res.code === 200) {
                         $("#content").show();
+                        $("#search").hide();
                         $('input[name="BTime"]').val(res.data.ETime);
                         $('input[name="ParentNo"]').val(res.data.OrderNo);
                     } else {
                         $("#content").hide();
+                        $("#search").show();
                         $('input[name="BTime"]').val('');
                         $('input[name="ParentNo"]').val('');
                         layer.open({
@@ -191,6 +193,7 @@
                 //请求失败，包含具体的错误信息
                 error: function(e) {
                     $("#content").hide();
+                    $("#search").show();
                     $('input[name="BTime"]').val('');
                     $('input[name="ParentNo"]').val('');
                     layer.open({
@@ -234,6 +237,13 @@
             //    }
             //});
             return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+        });
+
+        $('input[name="mobile"]').on("input", function (e) {
+            $("#content").hide();
+            $("#search").show();
+            $('input[name="BTime"]').val('');
+            $('input[name="ParentNo"]').val('');
         });
 
         form.on('submit(pay)', function (data) {

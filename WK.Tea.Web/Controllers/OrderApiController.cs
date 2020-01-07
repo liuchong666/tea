@@ -185,7 +185,7 @@ namespace WK.Tea.Web.Controllers
             T_Order orderResult = null;
             using (IT_Order repository = new T_OrderRepository())
             {
-                orderResult=repository.FindAll(c => c.Mobile == order.Mobile).OrderByDescending(c=>c.ID).FirstOrDefault();
+                orderResult=repository.FindAll(c => c.Mobile == order.Mobile&&c.PayStatus==1).OrderByDescending(c=>c.ID).FirstOrDefault();
             }
 
             if (orderResult == null)
