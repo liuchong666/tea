@@ -29,16 +29,16 @@
                 <div class="layui-form-item layui-item-separatorline" id="choiceTimeLong">
                     <label class="layui-form-label">预定时长</label>
                     <div class="layui-input-block">
-                        <input type="text" class="layui-input" readonly="readonly" value="2小时" />
-                        <input type="hidden" name="Duration" value="120" />
+                        <input type="text" class="layui-input" readonly="readonly" value="0.5小时" />
+                        <input type="hidden" name="Duration" value="30" />
                         <input type="hidden" name="ParentNo" value="0" />
-                        <input type="hidden" name="FeeCode" value="288" />
+                        <input type="hidden" name="FeeCode" value="50" />
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">消费金额</label>
                     <div class="layui-input-block">
-                        <span class="layui-badge layui-bg-orange"><span id="price">288</span>元</span>
+                        <span class="layui-badge layui-bg-orange"><span id="price">50</span>元</span>
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -126,7 +126,7 @@
             initData: function () {
                 var choiceStartTime = new Date($('input[name="BTime"]').val()),
                     data = [],
-                    timeLong = 120,
+                    timeLong = 30,
                     totalTime = choiceStartTime.getTime();
 
                 for (var j = 0; j < 18; j++) {
@@ -147,8 +147,8 @@
             },
             click: function (value) {
                 $('input[name="Duration"]').val(value);
-                var price = 288;
-                var t = value - 120;
+                var price = 50;
+                var t = value - 30;
                 price += t / 30 * 50;
 
                 var timelong = parseFloat(value) / 60;

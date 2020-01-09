@@ -679,6 +679,7 @@ namespace WK.Tea.Web.Controllers
                         {
                             order.ShopID = porder.ShopID;
                             order.Mobile = porder.Mobile;
+                            order.CardNo = porder.CardNo;
                             order.ReMarks = 0;
                             order.Flag = 1;
 
@@ -699,18 +700,18 @@ namespace WK.Tea.Web.Controllers
                                     endTime = order.ETime.AddMinutes(10).ToString("yyMMddHHmm"),
                                     mobile = string.IsNullOrWhiteSpace(order.Mobile) ? WK.Tea.Lock.ApiRequest.LockApiHelper.Mobile : order.Mobile
                                 };
-                                WK.Tea.Lock.ApiRequest.CreateCardResponse result =
-                                    WK.Tea.Lock.ApiRequest.LockApiHelper.WebApi.Post<WK.Tea.Lock.ApiRequest.CreateCardRequest, WK.Tea.Lock.ApiRequest.CreateCardResponse>("https://api.uclbrt.com/?c=Qrcode&a=getLink", postEntity);
+                                //WK.Tea.Lock.ApiRequest.CreateCardResponse result =
+                                //    WK.Tea.Lock.ApiRequest.LockApiHelper.WebApi.Post<WK.Tea.Lock.ApiRequest.CreateCardRequest, WK.Tea.Lock.ApiRequest.CreateCardResponse>("https://api.uclbrt.com/?c=Qrcode&a=getLink", postEntity);
                                 using (IT_Order repository = new T_OrderRepository())
                                 {
                                     TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
                                     order.OrderNo = "XDWX" + Convert.ToInt64(ts.TotalMilliseconds).ToString();
-                                    order.CardNo = result.cardNo;
+                                    //order.CardNo = result.cardNo;
                                     order.ReMarks = 1;
                                     order.PayStatus = 0;
                                     order.Flag = 0;
-                                    order.FeeCode = 288;
-                                    var t = order.Duration - 120;
+                                    order.FeeCode = 50;
+                                    var t = order.Duration - 30;
                                     if (t > 0)
                                     {
                                         order.FeeCode += t / 30 * 50;
