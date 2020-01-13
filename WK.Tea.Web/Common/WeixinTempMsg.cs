@@ -136,7 +136,7 @@ namespace WK.Tea.Web.Common
             jsonString.AppendFormat("\"color\":\"{0}\"", "#576b95");
             jsonString.Append("},");
             jsonString.Append("\"keyword4\":{");
-            jsonString.AppendFormat("\"value\":\"使用结束时间为{0}\"", orderEndTime.ToString("yyyy/MM/dd HH:mm"));
+            jsonString.AppendFormat("\"value\":\"使用结束时间为{0}\",", orderEndTime.ToString("yyyy/MM/dd HH:mm"));
             jsonString.AppendFormat("\"color\":\"{0}\"", "#ff0000");
             jsonString.Append("},");
             jsonString.Append("\"remark\":{");
